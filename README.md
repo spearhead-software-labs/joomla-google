@@ -1,4 +1,4 @@
 joomla-google
 
-Google plus platform websites for Joomla 2.5, 3 & 1.5
+Joomla extensions,plugins & modules for Google plus platform websites
 =============
