@@ -20,8 +20,8 @@ defined('_JEXEC') or die('Restricted Access');
 //include helper files
 require_once(dirname(__FILE__).DS.'helper.php');
 
-$fbButton = modSpearheadFacebookLikeHelper::getFacebookLike($params);
-$style = modSpearheadFacebookLikeHelper::getStyle($params);
-$copyRight = modSpearheadFacebookLikeHelper::copyRight();
+$fbButton = modSpearheadGooglePlusHelper::getFacebookLike($params);
+$style = modSpearheadGooglePlusHelper::getStyle($params);
+$copyRight = modSpearheadGooglePlusHelper::copyRight();
 require(JModuleHelper::getLayoutPath('mod_spearheadfacebooklike'));
 ?>

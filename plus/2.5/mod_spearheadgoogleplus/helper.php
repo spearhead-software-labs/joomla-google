@@ -13,7 +13,7 @@
  * other free or open source software licenses.
  */
 
-class modSpearheadFacebookLikeHelper
+class modSpearheadGooglePlusHelper
 {
 	/**
 	 * Helper class for Joomla Facebook Like module
@@ -49,7 +49,7 @@ class modSpearheadFacebookLikeHelper
 		{
 			if($auto_discovery=='yes' || $like_url=='')
 			{
-				$url =  modSpearheadFacebookLikeHelper::autoDiscovery();
+				$url =  modSpearheadGooglePlusHelper::autoDiscovery();
 			}
 			else 
 			{
