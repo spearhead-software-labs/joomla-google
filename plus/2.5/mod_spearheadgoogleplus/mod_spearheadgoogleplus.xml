@@ -38,97 +38,47 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic" label="Module Parameters" description="Configure Module">
-				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="MOD_SPEARHEADFACEBOOKLIKE_MODULE_CLASS_SUFFIX"/>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="like_button_type" type="radio" default="iframe" label="MOD_SPEARHEADFACEBOOKLIKE_BUTTON_TYPE_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_BUTTON_TYPE_DESC">
-					<option value="iframe">iFrame</option>
-					<option value="xfbml">XFBML</option>
-				</field>
-				<param name="spearheadspacer" type="spacer" default="" label="" description="" />		
-				<field name="send_button" type="radio" default="0" label="MOD_SPEARHEADFACEBOOKLIKE_SEND_BUTTON_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_SEND_BUTTON_DESC">
-					<option value="1">MOD_SPEARHEADFACEBOOKLIKE_YES</option>
-					<option value="0">MOD_SPEARHEADFACEBOOKLIKE_NO</option>
-				</field>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />					
-				<field name="auto_discovery" type="list" default="yes" label="MOD_SPEARHEADFACEBOOKLIKE_AUTO_DISCOVERY_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_AUTO_DISCOVERY_DESC">
-					<option value="yes">MOD_SPEARHEADFACEBOOKLIKE_YES</option>
-					<option value="no">MOD_SPEARHEADFACEBOOKLIKE_NO</option>
-				</field>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="like_url" type="text" default="" label="MOD_SPEARHEADFACEBOOKLIKE_LIKE_URL_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_LIKE_URL_DESC"/>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="layout_style" type="list" default="" label="MOD_SPEARHEADFACEBOOKLIKE_LAYOUT_STYLE_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_LAYOUT_STYLE_DESC">
-					<option value="standard">standard</option>
-					<option value="button_count">button_count</option>
-					<option value="box_count">box_count</option>
-				</field>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="show_faces" type="radio" default="1" label="MOD_SPEARHEADFACEBOOKLIKE_SHOW_FACES_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_SHOW_FACES_DESC">
-					<option value="1">MOD_SPEARHEADFACEBOOKLIKE_SHOW_FACES_SHOW</option>
-					<option value="0">MOD_SPEARHEADFACEBOOKLIKE_SHOW_FACES_HIDE</option>
-				</field>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="verb_to_display" type="list" default="like" label="MOD_SPEARHEADFACEBOOKLIKE_VERB_TO_DISPLAY_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_VERB_TO_DISPLAY_DESC">
-					<option value="like">MOD_SPEARHEADFACEBOOKLIKE_VERB_TO_DISPLAY_LIKE</option>
-					<option value="recommend">MOD_SPEARHEADFACEBOOKLIKE_VERB_TO_DISPLAY_RECOMMEND</option>			
-				</field>
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="appId" type="text" label="appId" description="Provide the app ID of your facebook app"/>
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="MOD_SPEARHEADFACEBOOKLIKE_MODULE_CLASS_SUFFIX"/>
 			
-				<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="language" type="text" default="en_GB" label="MOD_SPEARHEADFACEBOOKLIKE_LANGUAGE_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_LANGUAGE_DESC"/>
+			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
+			<field name="data-size" type="radio" default="" label="Size" description="Sets the +1 button size to render.">
+					<option value="small">Small</option>
+					<option value="medium">Medium</option>
+					<option value="">Standard</option>
+					<option value="tall">Tall</option>
+			</field>
+				
+			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
+			<field name="data-annotation" type="list" default="inline" label="Annotation" description="none : Do not render additional annotations. bubble : Display the number of users who have +1'd the page in a graphic next to the button. inline : Display profile pictures of connected users who have +1'd the page and a count of users who have +1'd the page.">
+			
+					<option value="inline">Inline</option>
+					<option value="">Bubble</option>
+					<option value="none">none</option>
+			</field>
+			
+			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
+			<field name="width" type="text" default="300" label="width" description="If annotation is set to inline, this parameter sets the width in pixels to use for the button and its inline annotation. If the width is omitted, a button and its inline annotation use 450px."/>
+			
+			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
+			<field name="lang" type="text" default="en-US" label="language" description="languages "/>
+				
 			</fieldset>	
-			<fieldset name="basic1" label="Design Parameters" description="design">
+			<fieldset name="basic1" label="Script Tag Parameters" description="Script tags ">
 		
 		    <field name="spearheadspacer" type="spacer" default="" label="" description="" />
-			<field name="font" type="list" default="" label="MOD_SPEARHEADFACEBOOKLIKE_FONT_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_FONT_DESC">
-					<option value=""></option>		
-					<option value="arial">arial</option>
-					<option value="lucida grande">lucida grande</option>
-					<option value="segoe ui">segoe ui</option>	
-					<option value="tahoma">tahoma</option>
-					<option value="trebuchet ms">trebuchet ms</option>
-					<option value="verdana">verdana</option>
-			</field>
-			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-			<field name="color_scheme" type="list" default="light" label="MOD_SPEARHEADFACEBOOKLIKE_COLOR_SCHEME_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_COLOR_SCHEME_DESC">
-					<option value="light">MOD_SPEARHEADFACEBOOKLIKE_COLOR_SCHEME_LIGHT</option>
-					<option value="dark">MOD_SPEARHEADFACEBOOKLIKE_COLOR_SCHEME_DARK</option>
-			</field>
-			
-			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-				<field name="width" type="text" default="450" label="MOD_SPEARHEADFACEBOOKLIKE_WIDTH_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_WIDTH_DESC"/>
-			
-			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-			<field name="height" type="text" default="80" label="MOD_SPEARHEADFACEBOOKLIKE_HEIGHT_LBL" description="MOD_SPEARHEADFACEBOOKLIKE_HEIGHT_DESC"/>
+		    <field name="asynchronous" type="checkbox" label="Asynchronous" description="Asynchronous" value="1" />
 		    
 		    <field name="spearheadspacer" type="spacer" default="" label="" description="" />
-			<field name="floating" type="list" label="Float" description="
-						Left : The element floats to the left.
-						Right : The element floats the right.
-						None : Default. The element is not floated, and will be displayed just where it occurs in the text.  ">
-				<option value="none">None</option>
-				<option value="left">Left</option>
-				<option value="right">Right</option>
+		    <field name="parsetags" type="list" default="" label="Parse Tags" description="Sets the loading mechanism to use. ">
+					<option value="">Default(on load)</option>
+					<option value="explicit">Explicit</option>
 			</field>
 			
 			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-			<field name="positioning" type="list" label="Position" description="
-								Static  : Default. Elements render in order, as they appear in the document flow. 
-								Absolute: The element is positioned relative to its first positioned (not static) ancestor element. 
-								Fixed : The element is positioned relative to the browser window. 
-								Relative : The element is positioned relative to its normal position.">
-				<option value="static">Static</option>
-				<option value="absolute">Absolute</option>
-				<option value="fixed">Fixed</option>
-				<option value="relative">Relative</option>
-			</field>
+			<field name="data-callback" type="text" default="" label="JS callback function" description="If specified, this function is called after the user clicks the +1 button. The callback function must be in the global namespace and accept a single parameter, which is a JSON object "/>
 			
-		<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-		<field name="top" type="text" default="" label="Top" description="desc"/>
-		
-		<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-		<field name="left" type="text" default="" label="Left" description="desc"/>
+     		<field name="spearheadspacer" type="spacer" default="" label="" description="" />
+	    	<field name="data-href" type="text" default="" label="URL to +1" description="Sets the URL to +1."/>
 		
 </fieldset>		
 		</fields>
