@@ -16,24 +16,45 @@
 class modSpearheadGooglePlusHelper
 {
 	/**
-	 * Helper class for Joomla Facebook Like module
+	 * Helper class for Joomla Google Plus module
 	 * 
 	 * @param array $params Variable holding all the parameters of the module helper object 
 	 * @access public
 	 */
 	
-	public $fbLikeLinkBase = 'http://www.facebook.com/plugins/like.php?';
+	public $gLikeLinkBase = 'https://apis.google.com/js/plusone.js';
 	
 	/**
-	 * @name getFacebookLike
-	 * @tutorial Calculates and outputs the facebook like button code
+	 * @name getGooglePlusOne
+	 * @tutorial Calculates and outputs the google plus button code
 	 * @param array $params Variable holding all the parameters of the module helper object 
 	 * @access public
 	 */	
-	public function getFacebookLike($params)
+	public function getGooglePlusOne($params)
 	{
 		
-		$type = $params->get('like_button_type','iframe');
+		$dataSize = $params->get('data-size','');
+		//saving markup
+		if($dataSize != '')
+		{
+			$dataSize = 'data-size="'.$dataSize.'"';
+		}
+			
+		$dataAnnotation = $params->get('data-annotation','inline');
+		//saving markup
+		if($dataAnnotation !='')
+		{
+			$dataAnnotation = 'data-annotation="'.$dataAnnotation.'"';
+		}
+		
+		$dataWidth = $params->get('data-width',300);
+		$dataWidth = 'data-width="'.$dataWidth.'"';
+		
+		
+		$plusOneButton = '<div class="g-plusone" '.$dataSize.' '.$dataAnnotation.' '.$dataWidth.'></div>';
+		return $plusOneButton; 
+		
+/* 		$type = $params->get('like_button_type','iframe');
 		
 		// auto discovery is needed for iframe versions only since xfbml detects
 		// the current page and attach to the like button automatically.
@@ -125,7 +146,7 @@ class modSpearheadGooglePlusHelper
 							font="'.$font.'">
 						</fb:like>';
 				break;
-		}
+		} */
 		
 						  
 				  
