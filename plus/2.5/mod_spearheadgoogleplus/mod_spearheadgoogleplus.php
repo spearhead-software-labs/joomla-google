@@ -23,5 +23,5 @@ require_once(dirname(__FILE__).DS.'helper.php');
 $fbButton = modSpearheadGooglePlusHelper::getFacebookLike($params);
 $style = modSpearheadGooglePlusHelper::getStyle($params);
 $copyRight = modSpearheadGooglePlusHelper::copyRight();
-require(JModuleHelper::getLayoutPath('mod_spearheadfacebooklike'));
+require(JModuleHelper::getLayoutPath('mod_spearheadgoogleplus'));
 ?>
