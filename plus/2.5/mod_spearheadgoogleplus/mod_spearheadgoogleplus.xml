@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="module" version="1.6.0" method="upgrade" client="site">
-	<name>Spearhead Facebook Like Button.</name>
+	<name>Spearhead Google Plus</name>
 	<author>Thomas George</author>
 	<creationDate>July 2013</creationDate>
 	<copyright>All rights reserved Spearhead Softwares.</copyright>  
