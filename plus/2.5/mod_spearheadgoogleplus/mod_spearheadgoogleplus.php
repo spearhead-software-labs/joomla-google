@@ -22,6 +22,10 @@ require_once(dirname(__FILE__).DS.'helper.php');
 
 $gPlusOneButton = modSpearheadGooglePlusHelper::getGooglePlusOne($params);
 $script = modSpearheadGooglePlusHelper::getGooglePlusOneJs($params);
+echo "<pre>";
+print_r($gPlusOneButton);
+print_r($script);
+echo "</pre>";
 //$style = modSpearheadGooglePlusHelper::getStyle($params);
 //$copyRight = modSpearheadGooglePlusHelper::copyRight();
 require(JModuleHelper::getLayoutPath('mod_spearheadgoogleplus'));
