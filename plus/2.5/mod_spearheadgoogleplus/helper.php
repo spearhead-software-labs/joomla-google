@@ -106,6 +106,7 @@ class modSpearheadGooglePlusHelper
 				$script['position'] = "#</body>";
 				$script['script'] = "{parsetags: 'explicit'};gapi.plusone.go();";
 			}
+			return $script;
 	}	
 	
   /**
