@@ -20,8 +20,9 @@ defined('_JEXEC') or die('Restricted Access');
 //include helper files
 require_once(dirname(__FILE__).DS.'helper.php');
 
-$fbButton = modSpearheadGooglePlusHelper::getFacebookLike($params);
-$style = modSpearheadGooglePlusHelper::getStyle($params);
-$copyRight = modSpearheadGooglePlusHelper::copyRight();
+$gPlusOneButton = modSpearheadGooglePlusHelper::getGooglePlusOne($params);
+$script = modSpearheadGooglePlusHelper::getGooglePlusOneJs($params);
+//$style = modSpearheadGooglePlusHelper::getStyle($params);
+//$copyRight = modSpearheadGooglePlusHelper::copyRight();
 require(JModuleHelper::getLayoutPath('mod_spearheadgoogleplus'));
 ?>

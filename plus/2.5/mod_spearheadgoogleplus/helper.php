@@ -50,12 +50,64 @@ class modSpearheadGooglePlusHelper
 		$dataWidth = $params->get('data-width',300);
 		$dataWidth = 'data-width="'.$dataWidth.'"';
 		
+		$dataCallback = $params->get('data-callback','');
+		if($dataCallback != '')
+		{
+			$dataCallback = 'data-callback="'.$dataCallback.'"';
+		}
 		
-		$plusOneButton = '<div class="g-plusone" '.$dataSize.' '.$dataAnnotation.' '.$dataWidth.'></div>';
+		$dataHref = $params->get('data-href','');
+		if($dataHref != '')
+		{
+			$dataHref = 'data-href="'.$dataHref.'"';
+		}		
+		
+		
+		$plusOneButton = '<div class="g-plusone" '.$dataSize.' '.$dataAnnotation.' '.$dataWidth.' '.$dataCallback.' '.$dataHref.'></div>';
 		return $plusOneButton; 
 		
 
 	}
+	
+	
+	/**
+	 * @name getGooglePlusOneJs
+	 * @tutorial Calculates and outputs the google plus api include js scripts
+	 * @param array $params Variable holding all the parameters of the module helper object
+	 * @access public
+	 */
+	public function getGooglePlusOneJs($params)
+	{
+			$asynchronous = $params->get('asynchronous');
+			$parseTags = $params->get('parsetags');
+			$script = array();
+			if($asynchronous == 1 && $parseTags=='')
+			{
+				$script['script'] = "(function() {
+							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							    po.src = 'https://apis.google.com/js/plusone.js';
+							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  })();";
+				$script['position'] = "#</body>";
+				$script['src'] = '';
+				
+			}
+			
+			if($asynchronous == '' && $parseTags =='')
+			{
+				$script['src'] = 'https://apis.google.com/js/plusone.js';
+				$script['position'] = "#</body>";
+				
+			}
+			
+			if($parseTags == 'explicit')
+			{
+				$script['src'] = 'https://apis.google.com/js/plusone.js';
+				$script['position'] = "#</body>";
+				$script['script'] = "{parsetags: 'explicit'};gapi.plusone.go();";
+			}
+	}	
+	
   /**
     * @name getStyle
     * @tutorial Sets the style parameters to outer div based on joomla settings are returned
