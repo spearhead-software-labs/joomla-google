@@ -57,7 +57,7 @@
 			</field>
 			
 			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
-			<field name="width" type="text" default="300" label="width" description="If annotation is set to inline, this parameter sets the width in pixels to use for the button and its inline annotation. If the width is omitted, a button and its inline annotation use 450px."/>
+			<field name="data-width" type="text" default="300" label="width" description="If annotation is set to inline, this parameter sets the width in pixels to use for the button and its inline annotation. If the width is omitted, a button and its inline annotation use 450px."/>
 			
 			<field name="spearheadspacer" type="spacer" default="" label="" description="" />
 			<field name="lang" type="text" default="en-US" label="language" description="languages "/>
