@@ -52,7 +52,7 @@
 			<field name="data-annotation" type="list" default="inline" label="Annotation" description="none : Do not render additional annotations. bubble : Display the number of users who have +1'd the page in a graphic next to the button. inline : Display profile pictures of connected users who have +1'd the page and a count of users who have +1'd the page.">
 			
 					<option value="inline">Inline</option>
-					<option value="">Bubble</option>
+					<option value="bubble">Bubble</option>
 					<option value="none">none</option>
 			</field>
 			

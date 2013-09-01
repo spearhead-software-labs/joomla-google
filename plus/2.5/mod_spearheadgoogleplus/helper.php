@@ -42,7 +42,7 @@ class modSpearheadGooglePlusHelper
 			
 		$dataAnnotation = $params->get('data-annotation','inline');
 		//saving markup
-		if($dataAnnotation !='')
+		if($dataAnnotation !='bubble')
 		{
 			$dataAnnotation = 'data-annotation="'.$dataAnnotation.'"';
 		}
