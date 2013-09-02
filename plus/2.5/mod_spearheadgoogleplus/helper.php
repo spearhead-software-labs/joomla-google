@@ -46,6 +46,10 @@ class modSpearheadGooglePlusHelper
 		{
 			$dataAnnotation = 'data-annotation="'.$dataAnnotation.'"';
 		}
+		else
+		{
+			$dataAnnotation = '';
+		}
 		
 		$dataWidth = $params->get('data-width',300);
 		$dataWidth = 'data-width="'.$dataWidth.'"';
