@@ -63,7 +63,7 @@
 			<field name="lang" type="text" default="en-US" label="language" description="languages "/>
 				
 			</fieldset>	
-			<fieldset name="basic1" label="Script Tag Parameters" description="Script tags ">
+			<fieldset name="basic1" label="Advanced Options" description="Advanced Parameters ">
 		
 		    <field name="spearheadspacer" type="spacer" default="" label="" description="" />
 		    <field name="asynchronous" type="checkbox" default="1" label="Asynchronous" description="Asynchronous" value="1" />
